@@ -4,8 +4,9 @@ let popupList = [];
 const INITIAL_ZOOM = 3;
 const INITIAL_COORDINATES = [-0.127758, 51.507351];
 const TARGET_ZOOM = 7;
+const ACCESS_TOKEN = 'ADD_ACCESS_TOKEN_HERE';
 
-mapboxgl.accessToken = 'ADD_ACCESS_TOKEN_HERE';
+mapboxgl.accessToken = ACCESS_TOKEN;
 const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
