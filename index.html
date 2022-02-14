@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mapbox</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body {
+            margin: 0;
+
+        }
+        .marker {
+            width: 25px;
+            height: 25px;
+            border-radius: 100px;
+            position: relative;
+            cursor: pointer;
+
+        }
+        .marker::before {
+            content: '';
+            position: absolute;
+            z-index: 0;
+            width: 30px;
+            height: 30px;
+            background: white;
+            border-radius: 100px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.4);
+        }
+        .marker::after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            width: 22px;
+            height: 22px;
+            background: #d9232e;
+            border-radius: 100px;
+            left: 4px;
+            top: 4px;
+        }
+        .marker-popup .mapboxgl-popup-tip {
+            display: none;
+        }
+        .marker-popup .mapboxgl-popup-content {
+            border-radius: 0;
+            width: 400px;
+            border: solid 2px grey;
+        }
+        .marker-popup .mapboxgl-popup-content .thumbnail img {
+            width: 100%;
+            height: auto;
+        }
+        .marker-popup .mapboxgl-popup-content .text {
+            line-height: 1.5;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div id="map" style="width: 100vw;height: 100vh">
+
+</div>
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+<script src="script.js"></script>
+
+</body>
+</html>
